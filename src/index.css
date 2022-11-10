@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 70px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* start header ------------ */
+.header {
+  /* background: rgb(0, 119, 115);
+  background: linear-gradient(90deg, rgba(0, 119, 115, 1) 0%, rgba(15, 198, 191, 1) 63%); */
+}
+
+.header .logo,
+.header .list a {
+  color: #000 !important;
+}
+.header .cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px rgb(13, 13, 216);
+  box-shadow: none;
+  outline: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+.header .cart:hover {
+  border: solid 1px rgb(13, 13, 216);
+}
+.header .cart h6 {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  background: rgb(219 24 24);
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .navbar-toggler:focus {
+  box-shadow: none;
+}
+@media (max-width: 991px) {
+  .header .list-collapse {
+    background: rgb(0, 119, 115);
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+/* start Home -------------- */
+.home {
+  background: rgb(0, 119, 115);
+  background: linear-gradient(90deg, rgba(0, 119, 115, 1) 0%, rgba(15, 198, 191, 1) 63%);
+  height: 550px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* start product-card  */
+.product-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.product-card button {
+  display: block;
+  margin: auto;
+}
+
+/* cart ---------------- */
+.cart-card .box img {
+  width: 150px !important;
+  height: 150px !important;
+  margin-bottom: 10px;
+}
+
+.cart-card .overflow-scroll {
+  height: 600px;
+  overflow-x: hidden !important;
+  overflow-y: scroll;
+}
+.cart-card .overflow-scroll::-webkit-scrollbar {
+  display: none;
+}
