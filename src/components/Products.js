@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./redux/CartSlice";
 import { fethProducts } from "./redux/productsSlice";
 import Slide from "react-reveal/Slide";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const products = useSelector((state) => state.products);
@@ -28,9 +29,14 @@ const Products = () => {
                     <Card.Title className="title">{item.title.slice(0, 15)}.. </Card.Title>
                     <Card.Text className="desc">{item.description.slice(0, 25)}...</Card.Text>
                     <Card.Text>{item.price}</Card.Text>
-                    <Button variant="primary" onClick={() => dispatch(addToCart(item))}>
-                      Add To Cart
-                    </Button>
+                    <div className="d-flex gap-2">
+                      <Link to={`/product/${item.id}`} className="btn btn-danger" href="/">
+                        Details
+                      </Link>
+                      <Button variant="primary" onClick={() => dispatch(addToCart(item))}>
+                        Add To Cart
+                      </Button>
+                    </div>
                   </Card.Body>
                 </Card>
               </Slide>
